@@ -9,11 +9,11 @@
 import UIKit
 import CoreData
 
-class TeamViewController: UITableViewController, NSFetchedResultsControllerDelegate, NewTeamDelegate {
+class TeamViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var managedObjectContext: NSManagedObjectContext? = nil
     var editedTeamIndexPath: NSIndexPath? = nil
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Edit button on the left side
@@ -35,18 +35,12 @@ class TeamViewController: UITableViewController, NSFetchedResultsControllerDeleg
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // If someone clicked on the new team button
-        if segue.identifier == "newTeam" {
-            // just send our instance that can store a new team
-            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! NewTeamViewController
-            controller.newTeamDelegate = self
-        // If some team is selected
-        } else if segue.identifier == "teamSelected" {
+        // If someone clicked on a team button
+        if segue.identifier == "teamSelected" {
             // send our controller and MOC
             // It is not necessary to send MOC, can be instantiated separately in the seque.
             let personsViewController = segue.destinationViewController as! PersonsTableViewController
-            personsViewController.teamViewController = self
-            personsViewController.managedObjectContext = self.managedObjectContext
+            personsViewController.teamViewControllerNC = self.navigationController
             // Send selected team
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let selectedTeam = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Team
@@ -62,35 +56,11 @@ class TeamViewController: UITableViewController, NSFetchedResultsControllerDeleg
         }
     }
 
-    // MARK: - NewTeamDelegate
-    
-    // Adding a new team
-    func saveNewTeamWithName(name: String, andImage image: UIImage){
-        let context = self.fetchedResultsController.managedObjectContext
-        let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newTeam = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! Team
-        
-        // If you want to store an image into CoreData you must convert it to PNG or other file representation
-        newTeam.image = UIImagePNGRepresentation(image)
-        newTeam.name = name
-        newTeam.happiness = 0.0
-        
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            //print("Unresolved error \(error), \(error.userInfo)")
-            abort()
-        }
-    }
 
     // MARK: - EditTeamDelegate
     
     // Saving changes in a team
     func saveEditedTeamWith(name: String, andImage image: UIImage,atIndexPath indexPath:NSIndexPath){
-        
         
         let context = self.fetchedResultsController.managedObjectContext
         let team = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Team
@@ -226,15 +196,6 @@ class TeamViewController: UITableViewController, NSFetchedResultsControllerDeleg
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         self.tableView.endUpdates()
     }
-
-    /*
-     // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
-     
-     func controllerDidChangeContent(controller: NSFetchedResultsController) {
-         // In the simplest, most efficient, case, reload the table view.
-         self.tableView.reloadData()
-     }
-     */
     
     // MARK: - Custom edit menu
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {

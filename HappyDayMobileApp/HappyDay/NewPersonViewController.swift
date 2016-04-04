@@ -17,17 +17,13 @@
 import UIKit
 import MobileCoreServices
 
-protocol NewPersonDelegate{
-    func saveNewPerson(name: String, image: UIImage)
-}
-
 
 class NewPersonViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var newPersonDelegate: NewPersonDelegate? = nil
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    
+    var selectedTeam: Team? = nil // team selected in previous step
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +38,7 @@ class NewPersonViewController: UIViewController, UIImagePickerControllerDelegate
     @IBAction func save(sender: AnyObject) {
         if let personName = nameTextField.text {
             if personName != "" {
-                newPersonDelegate?.saveNewPerson(personName, image: imageView.image!)
+                Person.createPersonWithName(personName, andImage: imageView.image!, inTeam: selectedTeam!)
                 dismissViewControllerAnimated(true, completion: nil)
             } else {
                 nameTextField.becomeFirstResponder()
@@ -55,16 +51,6 @@ class NewPersonViewController: UIViewController, UIImagePickerControllerDelegate
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
     // MARK: - ImagePicker
     

@@ -11,8 +11,8 @@ import CoreData
 
 class EventViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
-    var managedObjectContext: NSManagedObjectContext? = nil
-    var personViewController : PersonsTableViewController? = nil
+    var teamViewControllerNC : UINavigationController? = nil
+    
     var selectedPerson : Person? = nil
     
     var detailItem: AnyObject? {
@@ -41,33 +41,7 @@ class EventViewController: UIViewController, NSFetchedResultsControllerDelegate 
     // MARK: - Saving
     
     func saveNewEvent(happiness: Float){
-        print("Happiness: \(happiness)")
-        let context = self.fetchedResultsController.managedObjectContext
-        let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newRecord = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! Event
-        
-        // If appropriate, configure the new managed object.
-        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        newRecord.timeStamp = NSDate()
-        newRecord.happiness = happiness
-        
-        if let indexPath = self.personViewController!.tableView.indexPathForSelectedRow {
-            let selectedPerson = self.personViewController!.fetchedResultsController.objectAtIndexPath(indexPath) as! Person
-            newRecord.person = selectedPerson
-            print("\(selectedPerson.name)")
-        } else {
-            newRecord.person = nil
-        }
-        
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            // print("Unresolved error \(error), \(error.userInfo)")
-            abort()
-        }
+        Event.createEventForPerson(self.selectedPerson!, withHappiness: happiness, inTime: NSDate())
     }
     
     // MARK: - Fetched results controller
@@ -79,7 +53,10 @@ class EventViewController: UIViewController, NSFetchedResultsControllerDelegate 
         
         let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext = appDelegate.managedObjectContext
+        
+        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: managedObjectContext)
         fetchRequest.entity = entity
         
         // Set the batch size to a suitable number.
@@ -97,7 +74,7 @@ class EventViewController: UIViewController, NSFetchedResultsControllerDelegate 
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
@@ -130,7 +107,7 @@ class EventViewController: UIViewController, NSFetchedResultsControllerDelegate 
             self.saveNewEvent(1.0)
         }
         // resetuje bocni menu
-        self.personViewController?.teamViewController?.navigationController!.popToRootViewControllerAnimated(true)
+        self.teamViewControllerNC!.popToRootViewControllerAnimated(true)
     }
 }
 

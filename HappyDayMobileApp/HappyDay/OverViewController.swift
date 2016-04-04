@@ -46,16 +46,6 @@ class OverViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return sum/Double(self.fetchedResultsController.fetchedObjects!.count)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // MARK: - Table view data source
     
@@ -65,7 +55,6 @@ class OverViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = self.fetchedResultsController.sections![section]
-        print("lines: \(sectionInfo.numberOfObjects)")
         return sectionInfo.numberOfObjects
     }
     
