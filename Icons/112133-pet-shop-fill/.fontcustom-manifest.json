@@ -1,0 +1,248 @@
+{
+  "checksum": {
+    "previous": "488dd0edcfbb7a234efcb6cc74d05c36f00636449ad125af2ae1ac751ce05d9e",
+    "current": "488dd0edcfbb7a234efcb6cc74d05c36f00636449ad125af2ae1ac751ce05d9e"
+  },
+  "fonts": [
+    "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/font/Flaticon.ttf",
+    "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/font/Flaticon.svg",
+    "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/font/Flaticon.woff",
+    "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/font/Flaticon.eot"
+  ],
+  "glyphs": {
+    "animal-prints": {
+      "codepoint": 61696,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/animal-prints.svg"
+    },
+    "badge": {
+      "codepoint": 61697,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/badge.svg"
+    },
+    "ball": {
+      "codepoint": 61698,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/ball.svg"
+    },
+    "bell-toy": {
+      "codepoint": 61699,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/bell-toy.svg"
+    },
+    "bird": {
+      "codepoint": 61700,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/bird.svg"
+    },
+    "bird-house": {
+      "codepoint": 61701,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/bird-house.svg"
+    },
+    "bird-house-1": {
+      "codepoint": 61702,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/bird-house-1.svg"
+    },
+    "bone": {
+      "codepoint": 61703,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/bone.svg"
+    },
+    "brush": {
+      "codepoint": 61704,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/brush.svg"
+    },
+    "brush-1": {
+      "codepoint": 61705,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/brush-1.svg"
+    },
+    "carrot": {
+      "codepoint": 61706,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/carrot.svg"
+    },
+    "cat": {
+      "codepoint": 61707,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/cat.svg"
+    },
+    "cat-1": {
+      "codepoint": 61708,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/cat-1.svg"
+    },
+    "cat-cage": {
+      "codepoint": 61709,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/cat-cage.svg"
+    },
+    "cat-food": {
+      "codepoint": 61710,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/cat-food.svg"
+    },
+    "cat-toy": {
+      "codepoint": 61711,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/cat-toy.svg"
+    },
+    "comb": {
+      "codepoint": 61712,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/comb.svg"
+    },
+    "dog": {
+      "codepoint": 61713,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/dog.svg"
+    },
+    "dog-1": {
+      "codepoint": 61714,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/dog-1.svg"
+    },
+    "dog-food": {
+      "codepoint": 61715,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/dog-food.svg"
+    },
+    "duck": {
+      "codepoint": 61716,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/duck.svg"
+    },
+    "fish": {
+      "codepoint": 61717,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/fish.svg"
+    },
+    "fish-food": {
+      "codepoint": 61718,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/fish-food.svg"
+    },
+    "fishbones": {
+      "codepoint": 61719,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/fishbones.svg"
+    },
+    "fishes": {
+      "codepoint": 61720,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/fishes.svg"
+    },
+    "hamster": {
+      "codepoint": 61721,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/hamster.svg"
+    },
+    "hamster-water": {
+      "codepoint": 61722,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/hamster-water.svg"
+    },
+    "hedgehog": {
+      "codepoint": 61723,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/hedgehog.svg"
+    },
+    "injection": {
+      "codepoint": 61724,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/injection.svg"
+    },
+    "leash": {
+      "codepoint": 61725,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/leash.svg"
+    },
+    "leash-1": {
+      "codepoint": 61726,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/leash-1.svg"
+    },
+    "leash-2": {
+      "codepoint": 61727,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/leash-2.svg"
+    },
+    "leash-3": {
+      "codepoint": 61728,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/leash-3.svg"
+    },
+    "medical-kit": {
+      "codepoint": 61729,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/medical-kit.svg"
+    },
+    "milk": {
+      "codepoint": 61730,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/milk.svg"
+    },
+    "mouse-toy": {
+      "codepoint": 61731,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/mouse-toy.svg"
+    },
+    "parrot": {
+      "codepoint": 61732,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/parrot.svg"
+    },
+    "pet-drops": {
+      "codepoint": 61733,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/pet-drops.svg"
+    },
+    "pet-food": {
+      "codepoint": 61734,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/pet-food.svg"
+    },
+    "pet-food-1": {
+      "codepoint": 61735,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/pet-food-1.svg"
+    },
+    "pet-house": {
+      "codepoint": 61736,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/pet-house.svg"
+    },
+    "pet-shampoo": {
+      "codepoint": 61737,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/pet-shampoo.svg"
+    },
+    "pet-shampoo-1": {
+      "codepoint": 61738,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/pet-shampoo-1.svg"
+    },
+    "pet-shop": {
+      "codepoint": 61739,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/pet-shop.svg"
+    },
+    "pet-solution": {
+      "codepoint": 61740,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/pet-solution.svg"
+    },
+    "rabbit": {
+      "codepoint": 61741,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/rabbit.svg"
+    },
+    "scissors": {
+      "codepoint": 61742,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/scissors.svg"
+    },
+    "snake": {
+      "codepoint": 61743,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/snake.svg"
+    },
+    "squirrel": {
+      "codepoint": 61744,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/squirrel.svg"
+    },
+    "turtle": {
+      "codepoint": 61745,
+      "source": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg/turtle.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".flaticon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "Flaticon",
+    "force": true,
+    "input": {
+      "templates": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg",
+      "vectors": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/svg"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/font",
+      "fonts": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/font",
+      "preview": "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/font"
+    },
+    "preprocessor_path": null,
+    "quiet": true,
+    "templates": [
+      "../../../../../sites/flaticon/libraries/webfont/templates/flaticon.html",
+      "../../../../../sites/flaticon/libraries/webfont/templates/_flaticon.scss",
+      "../../../../../sites/flaticon/libraries/webfont/templates/flaticon.css"
+    ]
+  },
+  "templates": [
+    "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/font/flaticon.html",
+    "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/font/_flaticon.scss",
+    "/var/www/static/flaticon/zip_packs/112133-pet-shop-fill/font/flaticon.css"
+  ]
+}

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SwiftyDropbox
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -28,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! TeamViewController
         controller.managedObjectContext = self.managedObjectContext
+        
+        // Dropbox
+        Dropbox.setupWithAppKey("6p7q26kyul4aub7")
         
         return true
     }
@@ -124,6 +128,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                 abort()
             }
         }
+    }
+    
+    
+    //MARK:- Dropbox
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        
+        if let authResult = Dropbox.handleRedirectURL(url) {
+            switch authResult {
+            case .Success(let token):
+                print("Success! User is logged into Dropbox with token: \(token)")
+            case .Error(let error, let description):
+                print("Error \(error): \(description)")
+            }
+        }
+        
+        return false
     }
 
 }

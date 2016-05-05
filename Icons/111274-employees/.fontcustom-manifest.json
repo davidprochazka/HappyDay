@@ -1,0 +1,112 @@
+{
+  "checksum": {
+    "previous": "2eb22eb4b90811bc272cbcfd22ac059ea6d5e13e632fccf6efd3feef1810449b",
+    "current": "2eb22eb4b90811bc272cbcfd22ac059ea6d5e13e632fccf6efd3feef1810449b"
+  },
+  "fonts": [
+    "/var/www/static/flaticon/zip_packs/111274-employees/font/Flaticon.ttf",
+    "/var/www/static/flaticon/zip_packs/111274-employees/font/Flaticon.svg",
+    "/var/www/static/flaticon/zip_packs/111274-employees/font/Flaticon.woff",
+    "/var/www/static/flaticon/zip_packs/111274-employees/font/Flaticon.eot"
+  ],
+  "glyphs": {
+    "businessman-outline": {
+      "codepoint": 61696,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/businessman-outline.svg"
+    },
+    "butler-silhouette": {
+      "codepoint": 61697,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/butler-silhouette.svg"
+    },
+    "chef-outline": {
+      "codepoint": 61698,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/chef-outline.svg"
+    },
+    "employee-profile": {
+      "codepoint": 61699,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/employee-profile.svg"
+    },
+    "man-with-sunglasses": {
+      "codepoint": 61700,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/man-with-sunglasses.svg"
+    },
+    "office-worker": {
+      "codepoint": 61701,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/office-worker.svg"
+    },
+    "office-worker-outline": {
+      "codepoint": 61702,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/office-worker-outline.svg"
+    },
+    "office-worker-silhouette": {
+      "codepoint": 61703,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/office-worker-silhouette.svg"
+    },
+    "punk-outline": {
+      "codepoint": 61704,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/punk-outline.svg"
+    },
+    "school-boy-outline": {
+      "codepoint": 61705,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/school-boy-outline.svg"
+    },
+    "school-boy-outline-1": {
+      "codepoint": 61706,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/school-boy-outline-1.svg"
+    },
+    "servant-outline": {
+      "codepoint": 61707,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/servant-outline.svg"
+    },
+    "telephone-operator": {
+      "codepoint": 61708,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/telephone-operator.svg"
+    },
+    "waiter-outline": {
+      "codepoint": 61709,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/waiter-outline.svg"
+    },
+    "woman-with-dress-outline": {
+      "codepoint": 61710,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/woman-with-dress-outline.svg"
+    },
+    "worker-silhouette": {
+      "codepoint": 61711,
+      "source": "/var/www/static/flaticon/zip_packs/111274-employees/svg/worker-silhouette.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".flaticon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "Flaticon",
+    "force": true,
+    "input": {
+      "templates": "/var/www/static/flaticon/zip_packs/111274-employees/svg",
+      "vectors": "/var/www/static/flaticon/zip_packs/111274-employees/svg"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "/var/www/static/flaticon/zip_packs/111274-employees/font",
+      "fonts": "/var/www/static/flaticon/zip_packs/111274-employees/font",
+      "preview": "/var/www/static/flaticon/zip_packs/111274-employees/font"
+    },
+    "preprocessor_path": null,
+    "quiet": true,
+    "templates": [
+      "../../../../../sites/flaticon/libraries/webfont/templates/flaticon.html",
+      "../../../../../sites/flaticon/libraries/webfont/templates/_flaticon.scss",
+      "../../../../../sites/flaticon/libraries/webfont/templates/flaticon.css"
+    ]
+  },
+  "templates": [
+    "/var/www/static/flaticon/zip_packs/111274-employees/font/flaticon.html",
+    "/var/www/static/flaticon/zip_packs/111274-employees/font/_flaticon.scss",
+    "/var/www/static/flaticon/zip_packs/111274-employees/font/flaticon.css"
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "checksum": {
+    "previous": "6a8043d54b6c381835aa1fc48f9f10e48630d679aea9f85f9b19a21801235932",
+    "current": "6a8043d54b6c381835aa1fc48f9f10e48630d679aea9f85f9b19a21801235932"
+  },
+  "fonts": [
+    "/var/www/static/flaticon/zip_packs/112054-people-faces/font/Flaticon.ttf",
+    "/var/www/static/flaticon/zip_packs/112054-people-faces/font/Flaticon.svg",
+    "/var/www/static/flaticon/zip_packs/112054-people-faces/font/Flaticon.woff",
+    "/var/www/static/flaticon/zip_packs/112054-people-faces/font/Flaticon.eot"
+  ],
+  "glyphs": {
+    "amazed-man": {
+      "codepoint": 61696,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/amazed-man.svg"
+    },
+    "angry-man": {
+      "codepoint": 61697,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/angry-man.svg"
+    },
+    "angry-woman": {
+      "codepoint": 61698,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/angry-woman.svg"
+    },
+    "baby-crying": {
+      "codepoint": 61699,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/baby-crying.svg"
+    },
+    "baby-love": {
+      "codepoint": 61700,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/baby-love.svg"
+    },
+    "boy-broad-smile": {
+      "codepoint": 61701,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/boy-broad-smile.svg"
+    },
+    "boy-happy-smile": {
+      "codepoint": 61702,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/boy-happy-smile.svg"
+    },
+    "boy-smiling": {
+      "codepoint": 61703,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/boy-smiling.svg"
+    },
+    "boy-suffering": {
+      "codepoint": 61704,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/boy-suffering.svg"
+    },
+    "delighted-granny": {
+      "codepoint": 61705,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/delighted-granny.svg"
+    },
+    "disappointed-boy": {
+      "codepoint": 61706,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/disappointed-boy.svg"
+    },
+    "embarrased-boy": {
+      "codepoint": 61707,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/embarrased-boy.svg"
+    },
+    "embarrased-girl": {
+      "codepoint": 61708,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/embarrased-girl.svg"
+    },
+    "embarrased-granny": {
+      "codepoint": 61709,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/embarrased-granny.svg"
+    },
+    "emotive-granny": {
+      "codepoint": 61710,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/emotive-granny.svg"
+    },
+    "fat-boy": {
+      "codepoint": 61711,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/fat-boy.svg"
+    },
+    "fat-boy-angry": {
+      "codepoint": 61712,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/fat-boy-angry.svg"
+    },
+    "fat-boy-shocked": {
+      "codepoint": 61713,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/fat-boy-shocked.svg"
+    },
+    "fat-boy-smiling": {
+      "codepoint": 61714,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/fat-boy-smiling.svg"
+    },
+    "fat-boy-sorry": {
+      "codepoint": 61715,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/fat-boy-sorry.svg"
+    },
+    "frightened-hipster": {
+      "codepoint": 61716,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/frightened-hipster.svg"
+    },
+    "girl-air-kissing": {
+      "codepoint": 61717,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/girl-air-kissing.svg"
+    },
+    "girl-crying": {
+      "codepoint": 61718,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/girl-crying.svg"
+    },
+    "girl-embarrased": {
+      "codepoint": 61719,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/girl-embarrased.svg"
+    },
+    "girl-laughing-to-tears": {
+      "codepoint": 61720,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/girl-laughing-to-tears.svg"
+    },
+    "girl-showing-tongue": {
+      "codepoint": 61721,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/girl-showing-tongue.svg"
+    },
+    "girl-smiling": {
+      "codepoint": 61722,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/girl-smiling.svg"
+    },
+    "girl-with-poker-face": {
+      "codepoint": 61723,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/girl-with-poker-face.svg"
+    },
+    "happy-baby": {
+      "codepoint": 61724,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/happy-baby.svg"
+    },
+    "happy-woman": {
+      "codepoint": 61725,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/happy-woman.svg"
+    },
+    "hipster-smiling": {
+      "codepoint": 61726,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/hipster-smiling.svg"
+    },
+    "hypnotized-hipster": {
+      "codepoint": 61727,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/hypnotized-hipster.svg"
+    },
+    "inexpressive-girl": {
+      "codepoint": 61728,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/inexpressive-girl.svg"
+    },
+    "kissing-girl": {
+      "codepoint": 61729,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/kissing-girl.svg"
+    },
+    "man-with-moustache-smiling": {
+      "codepoint": 61730,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/man-with-moustache-smiling.svg"
+    },
+    "naughty-girl": {
+      "codepoint": 61731,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/naughty-girl.svg"
+    },
+    "perplexed-man": {
+      "codepoint": 61732,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/perplexed-man.svg"
+    },
+    "philosophizing-boy": {
+      "codepoint": 61733,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/philosophizing-boy.svg"
+    },
+    "sad-baby": {
+      "codepoint": 61734,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/sad-baby.svg"
+    },
+    "sad-girl": {
+      "codepoint": 61735,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/sad-girl.svg"
+    },
+    "sad-hipster": {
+      "codepoint": 61736,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/sad-hipster.svg"
+    },
+    "sad-woman": {
+      "codepoint": 61737,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/sad-woman.svg"
+    },
+    "satisfied-woman": {
+      "codepoint": 61738,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/satisfied-woman.svg"
+    },
+    "shocked-girl": {
+      "codepoint": 61739,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/shocked-girl.svg"
+    },
+    "sleeping-granny": {
+      "codepoint": 61740,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/sleeping-granny.svg"
+    },
+    "sleepy-boy": {
+      "codepoint": 61741,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/sleepy-boy.svg"
+    },
+    "smiling-baby": {
+      "codepoint": 61742,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/smiling-baby.svg"
+    },
+    "smiling-girl": {
+      "codepoint": 61743,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/smiling-girl.svg"
+    },
+    "surprised-girl": {
+      "codepoint": 61744,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/surprised-girl.svg"
+    },
+    "suspicious-man": {
+      "codepoint": 61745,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/suspicious-man.svg"
+    },
+    "teasing-boy": {
+      "codepoint": 61746,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/teasing-boy.svg"
+    },
+    "upset-girl": {
+      "codepoint": 61747,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/upset-girl.svg"
+    },
+    "upset-granny": {
+      "codepoint": 61748,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/upset-granny.svg"
+    },
+    "winking-boy": {
+      "codepoint": 61749,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/winking-boy.svg"
+    },
+    "wondered-hipster": {
+      "codepoint": 61750,
+      "source": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg/wondered-hipster.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".flaticon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "Flaticon",
+    "force": true,
+    "input": {
+      "templates": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg",
+      "vectors": "/var/www/static/flaticon/zip_packs/112054-people-faces/svg"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "/var/www/static/flaticon/zip_packs/112054-people-faces/font",
+      "fonts": "/var/www/static/flaticon/zip_packs/112054-people-faces/font",
+      "preview": "/var/www/static/flaticon/zip_packs/112054-people-faces/font"
+    },
+    "preprocessor_path": null,
+    "quiet": true,
+    "templates": [
+      "../../../../../sites/flaticon/libraries/webfont/templates/flaticon.html",
+      "../../../../../sites/flaticon/libraries/webfont/templates/_flaticon.scss",
+      "../../../../../sites/flaticon/libraries/webfont/templates/flaticon.css"
+    ]
+  },
+  "templates": [
+    "/var/www/static/flaticon/zip_packs/112054-people-faces/font/flaticon.html",
+    "/var/www/static/flaticon/zip_packs/112054-people-faces/font/_flaticon.scss",
+    "/var/www/static/flaticon/zip_packs/112054-people-faces/font/flaticon.css"
+  ]
+}

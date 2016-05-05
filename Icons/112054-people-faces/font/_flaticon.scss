@@ -1,0 +1,149 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 19/02/2016 14:53
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-amazed-man:before { content: "\f100"; }
+.flaticon-angry-man:before { content: "\f101"; }
+.flaticon-angry-woman:before { content: "\f102"; }
+.flaticon-baby-crying:before { content: "\f103"; }
+.flaticon-baby-love:before { content: "\f104"; }
+.flaticon-boy-broad-smile:before { content: "\f105"; }
+.flaticon-boy-happy-smile:before { content: "\f106"; }
+.flaticon-boy-smiling:before { content: "\f107"; }
+.flaticon-boy-suffering:before { content: "\f108"; }
+.flaticon-delighted-granny:before { content: "\f109"; }
+.flaticon-disappointed-boy:before { content: "\f10a"; }
+.flaticon-embarrased-boy:before { content: "\f10b"; }
+.flaticon-embarrased-girl:before { content: "\f10c"; }
+.flaticon-embarrased-granny:before { content: "\f10d"; }
+.flaticon-emotive-granny:before { content: "\f10e"; }
+.flaticon-fat-boy:before { content: "\f10f"; }
+.flaticon-fat-boy-angry:before { content: "\f110"; }
+.flaticon-fat-boy-shocked:before { content: "\f111"; }
+.flaticon-fat-boy-smiling:before { content: "\f112"; }
+.flaticon-fat-boy-sorry:before { content: "\f113"; }
+.flaticon-frightened-hipster:before { content: "\f114"; }
+.flaticon-girl-air-kissing:before { content: "\f115"; }
+.flaticon-girl-crying:before { content: "\f116"; }
+.flaticon-girl-embarrased:before { content: "\f117"; }
+.flaticon-girl-laughing-to-tears:before { content: "\f118"; }
+.flaticon-girl-showing-tongue:before { content: "\f119"; }
+.flaticon-girl-smiling:before { content: "\f11a"; }
+.flaticon-girl-with-poker-face:before { content: "\f11b"; }
+.flaticon-happy-baby:before { content: "\f11c"; }
+.flaticon-happy-woman:before { content: "\f11d"; }
+.flaticon-hipster-smiling:before { content: "\f11e"; }
+.flaticon-hypnotized-hipster:before { content: "\f11f"; }
+.flaticon-inexpressive-girl:before { content: "\f120"; }
+.flaticon-kissing-girl:before { content: "\f121"; }
+.flaticon-man-with-moustache-smiling:before { content: "\f122"; }
+.flaticon-naughty-girl:before { content: "\f123"; }
+.flaticon-perplexed-man:before { content: "\f124"; }
+.flaticon-philosophizing-boy:before { content: "\f125"; }
+.flaticon-sad-baby:before { content: "\f126"; }
+.flaticon-sad-girl:before { content: "\f127"; }
+.flaticon-sad-hipster:before { content: "\f128"; }
+.flaticon-sad-woman:before { content: "\f129"; }
+.flaticon-satisfied-woman:before { content: "\f12a"; }
+.flaticon-shocked-girl:before { content: "\f12b"; }
+.flaticon-sleeping-granny:before { content: "\f12c"; }
+.flaticon-sleepy-boy:before { content: "\f12d"; }
+.flaticon-smiling-baby:before { content: "\f12e"; }
+.flaticon-smiling-girl:before { content: "\f12f"; }
+.flaticon-surprised-girl:before { content: "\f130"; }
+.flaticon-suspicious-man:before { content: "\f131"; }
+.flaticon-teasing-boy:before { content: "\f132"; }
+.flaticon-upset-girl:before { content: "\f133"; }
+.flaticon-upset-granny:before { content: "\f134"; }
+.flaticon-winking-boy:before { content: "\f135"; }
+.flaticon-wondered-hipster:before { content: "\f136"; }
+    
+    $font-Flaticon-amazed-man: "\f100";
+    $font-Flaticon-angry-man: "\f101";
+    $font-Flaticon-angry-woman: "\f102";
+    $font-Flaticon-baby-crying: "\f103";
+    $font-Flaticon-baby-love: "\f104";
+    $font-Flaticon-boy-broad-smile: "\f105";
+    $font-Flaticon-boy-happy-smile: "\f106";
+    $font-Flaticon-boy-smiling: "\f107";
+    $font-Flaticon-boy-suffering: "\f108";
+    $font-Flaticon-delighted-granny: "\f109";
+    $font-Flaticon-disappointed-boy: "\f10a";
+    $font-Flaticon-embarrased-boy: "\f10b";
+    $font-Flaticon-embarrased-girl: "\f10c";
+    $font-Flaticon-embarrased-granny: "\f10d";
+    $font-Flaticon-emotive-granny: "\f10e";
+    $font-Flaticon-fat-boy: "\f10f";
+    $font-Flaticon-fat-boy-angry: "\f110";
+    $font-Flaticon-fat-boy-shocked: "\f111";
+    $font-Flaticon-fat-boy-smiling: "\f112";
+    $font-Flaticon-fat-boy-sorry: "\f113";
+    $font-Flaticon-frightened-hipster: "\f114";
+    $font-Flaticon-girl-air-kissing: "\f115";
+    $font-Flaticon-girl-crying: "\f116";
+    $font-Flaticon-girl-embarrased: "\f117";
+    $font-Flaticon-girl-laughing-to-tears: "\f118";
+    $font-Flaticon-girl-showing-tongue: "\f119";
+    $font-Flaticon-girl-smiling: "\f11a";
+    $font-Flaticon-girl-with-poker-face: "\f11b";
+    $font-Flaticon-happy-baby: "\f11c";
+    $font-Flaticon-happy-woman: "\f11d";
+    $font-Flaticon-hipster-smiling: "\f11e";
+    $font-Flaticon-hypnotized-hipster: "\f11f";
+    $font-Flaticon-inexpressive-girl: "\f120";
+    $font-Flaticon-kissing-girl: "\f121";
+    $font-Flaticon-man-with-moustache-smiling: "\f122";
+    $font-Flaticon-naughty-girl: "\f123";
+    $font-Flaticon-perplexed-man: "\f124";
+    $font-Flaticon-philosophizing-boy: "\f125";
+    $font-Flaticon-sad-baby: "\f126";
+    $font-Flaticon-sad-girl: "\f127";
+    $font-Flaticon-sad-hipster: "\f128";
+    $font-Flaticon-sad-woman: "\f129";
+    $font-Flaticon-satisfied-woman: "\f12a";
+    $font-Flaticon-shocked-girl: "\f12b";
+    $font-Flaticon-sleeping-granny: "\f12c";
+    $font-Flaticon-sleepy-boy: "\f12d";
+    $font-Flaticon-smiling-baby: "\f12e";
+    $font-Flaticon-smiling-girl: "\f12f";
+    $font-Flaticon-surprised-girl: "\f130";
+    $font-Flaticon-suspicious-man: "\f131";
+    $font-Flaticon-teasing-boy: "\f132";
+    $font-Flaticon-upset-girl: "\f133";
+    $font-Flaticon-upset-granny: "\f134";
+    $font-Flaticon-winking-boy: "\f135";
+    $font-Flaticon-wondered-hipster: "\f136";

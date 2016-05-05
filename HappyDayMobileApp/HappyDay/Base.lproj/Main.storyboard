@@ -615,6 +615,40 @@
             </objects>
             <point key="canvasLocation" x="2090" y="-1683"/>
         </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="gWo-i2-scX">
+            <objects>
+                <collectionViewController id="FtU-Zs-1TL" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yJO-nr-eFK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t3m-wh-3rh">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="O4T-mX-Cbu">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="FtU-Zs-1TL" id="XNz-eK-MRb"/>
+                            <outlet property="delegate" destination="FtU-Zs-1TL" id="vso-2f-WGn"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbU-cp-Qdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="-1842"/>
+        </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
@@ -915,6 +949,12 @@
                                             <action selector="exportData:" destination="fnR-2d-NJB" id="njL-Ds-pfv"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pRT-lk-oKc"/>
+                                    <barButtonItem title="Link to DropBox" id="QmT-iX-ZYZ">
+                                        <connections>
+                                            <action selector="linkToDropboxPressed:" destination="fnR-2d-NJB" id="Ydx-y7-KUM"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="CZz-6G-zY3"/>
                                     <barButtonItem title="Save to DropBox" id="rol-zX-NHX"/>
                                 </items>
@@ -1047,6 +1087,6 @@
         <image name="very-sad" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xjT-Cz-7WW"/>
+        <segue reference="iVG-7x-AJT"/>
     </inferredMetricsTieBreakers>
 </document>
