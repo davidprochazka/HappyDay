@@ -15,12 +15,21 @@ class NewPersonViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var imageView: UIImageView!
     
     var selectedTeam : Team? = nil
-    
-    
+    var editedPerson : Person? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if (editedPerson != nil){
+            navigationController?.navigationBar.topItem?.title = "Edit your person"
+            fillForm()
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    func fillForm(){
+        nameTextField.text = editedPerson?.name
+        imageView.image = UIImage(data: editedPerson!.image!)
     }
 
     override func didReceiveMemoryWarning() {

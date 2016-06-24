@@ -15,10 +15,23 @@ class NewTeamViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
+    var editedTeam: Team? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if (editedTeam != nil){
+            navigationController?.navigationBar.topItem?.title = "Edit your Team"
+        
+            fillForm()
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    func fillForm(){
+        nameTextField.text = editedTeam?.name
+        imageView.image = UIImage(data: editedTeam!.image!)
+        
     }
     
     override func didReceiveMemoryWarning() {

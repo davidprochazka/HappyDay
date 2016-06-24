@@ -16,8 +16,6 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
     @IBOutlet weak var addBtn: UIBarButtonItem!
     
     var managedObjectContext: NSManagedObjectContext? = nil
-    var statisticsButton:UIBarButtonItem? = nil
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,23 +25,27 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
             self.managedObjectContext = appDelegate.managedObjectContext
         }
         
-        statisticsButton = UIBarButtonItem(title: "Statistics", style: .Bordered, target:
-            self, action: "statisticsButtonClick:")
-        
+        //statisticsButton = UIBarButtonItem(title: "Statistics", style: .Bordered, target:self, action: "statisticsButtonClick:")
         
         // collectionView.editing = true (setEDiting)
-        navigationItem.leftBarButtonItems = [editButtonItem(), statisticsButton!]
-        addBtn.enabled = false
-        
+        navigationItem.leftBarButtonItems = [editButtonItem()]
     }
 
     override func setEditing(editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
-        collectionView?.allowsMultipleSelection = false
 
-        updateLeftButtonBarItems(editing)
+        
+        if editing{
+            collectionView?.allowsMultipleSelection = false
+
+            addBtn.enabled = false
+        } else {
+            addBtn.enabled = true
+
+        }
     }
     
+    /*
     func updateLeftButtonBarItems(editing: Bool){
         if (editing){
             navigationItem.leftBarButtonItems?.popLast()
@@ -51,6 +53,56 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
             navigationItem.leftBarButtonItems?.append(statisticsButton!)
         }
     }
+     */
+    
+    func editItem(object: NSManagedObject){
+        performSegueWithIdentifier("editTeam", sender: self)
+    }
+    
+    func deleteItem(object: NSManagedObject){
+        let team = object as! Team
+        team.deleteTeam()
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        if (editing){
+            let cell = collectionView.cellForItemAtIndexPath(indexPath)
+            projectOptionsClick(cell!, indexPath: indexPath)
+        }
+    }
+    
+    func projectOptionsClick(cell: UICollectionViewCell, indexPath: NSIndexPath?) {
+        
+        let object = _fetchedResultsController?.objectAtIndexPath(indexPath!) as! NSManagedObject
+        
+        let optionMenu = UIAlertController(title: String(format: "Choose an action:"), message: "BlaBla", preferredStyle: .ActionSheet)
+        
+        let action = UIAlertAction(title: "Edit", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.editItem(object)
+        })
+        let action2 = UIAlertAction(title: "Delete", style: .Destructive, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.deleteItem(object)
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+        })
+        
+        optionMenu.addAction(action)
+        optionMenu.addAction(action2)
+        optionMenu.addAction(cancelAction)
+        
+        // Musi byt pro tablety
+        optionMenu.popoverPresentationController?.sourceView = cell
+        optionMenu.popoverPresentationController?.sourceRect = cell.bounds
+        optionMenu.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.Up
+        
+        presentViewController(optionMenu, animated: true, completion: nil)
+    }
+    
     
     
     func statisticsButtonClick(sender: UIBarButtonItem){
@@ -73,6 +125,15 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
             if let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first {
                 let selectedTeam = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Team
                 personsViewController.selectedTeam = selectedTeam
+            }
+        } else if segue.identifier == "editTeam" {
+            let navigationViewController = segue.destinationViewController as! UINavigationController
+            let newTeamViewController = navigationViewController.childViewControllers[0] as! NewTeamViewController
+
+            // Send selected team
+            if let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first {
+                let selectedTeam = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Team
+                newTeamViewController.editedTeam = selectedTeam
             }
         }
     }

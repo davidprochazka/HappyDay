@@ -32,4 +32,17 @@ class Team: NSManagedObject {
         
         return newTeam
     }
+    
+    func deleteTeam(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext = appDelegate.managedObjectContext
+        
+        managedObjectContext.deleteObject(self)
+        
+        do {
+            try managedObjectContext.save()
+        } catch {
+            abort()
+        }
+    }
 }
