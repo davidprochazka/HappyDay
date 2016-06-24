@@ -1,8 +1,8 @@
 //
-//  StatsViewController.swift
+//  StatisticsTableViewController.swift
 //  HappyDaysCollectionVersion
 //
-//  Created by David Prochazka on 24/05/16.
+//  Created by David Prochazka on 24/06/16.
 //  Copyright © 2016 David Prochazka. All rights reserved.
 //
 
@@ -10,28 +10,19 @@ import UIKit
 import CoreData
 import MessageUI
 
-class StatsViewController: UIViewController, MFMailComposeViewControllerDelegate, NSFetchedResultsControllerDelegate {
-        
-    var rootNavigationController: UINavigationController? = nil
-    var managedObjectContext: NSManagedObjectContext? = nil
-    var selectedPerson: Person? = nil
-    
-    var selectedMood: Int? = nil
 
-    @IBOutlet weak var currentMoodLabel: UILabel!
-    @IBOutlet weak var weekMoodLabel: UILabel!
-    @IBOutlet weak var monthMoodLabel: UILabel!
+class StatisticsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, NSFetchedResultsControllerDelegate {
+
+    var managedObjectContext: NSManagedObjectContext? = nil
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // po navratu z hodnoticiho view muze byt view bez MOC
+
         if self.managedObjectContext == nil {
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             self.managedObjectContext = appDelegate.managedObjectContext
         }
-        
-        calculateAverageMoods()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,17 +30,27 @@ class StatsViewController: UIViewController, MFMailComposeViewControllerDelegate
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func closeClicked(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-        
-        // je naplneny hodnotou pouze pokud se na stranku statistik dostanu z pridani nove udalosti
-        if self.rootNavigationController != nil{
-            self.rootNavigationController!.popToRootViewControllerAnimated(true)
-        }
+    // MARK: - Table view data source
+
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
 
-    // MARK: - Calculcations
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.fetchedResultsController.sections![section].numberOfObjects
+    }
+
     
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("teamStatCell", forIndexPath: indexPath) as! StatisticsTableViewCell
+        let team = fetchedResultsController.objectAtIndexPath(indexPath) as! Team
+        
+        cell.teamName.text = team.name
+        //cell.rating.text = team.
+        return cell
+    }
+ 
+
     func daysFromToday(startDate: NSDate) -> Int
     {
         let calendar = NSCalendar.currentCalendar()
@@ -79,11 +80,11 @@ class StatsViewController: UIViewController, MFMailComposeViewControllerDelegate
             }
         }
         
-        currentMoodLabel.text = selectedMood?.description
-        weekMoodLabel.text = (round(sumWeek/countWeek*10)/10).description
-        monthMoodLabel.text = (round(sumMonth/countMonth*10)/10).description
+        //currentMoodLabel.text = selectedMood?.description
+        //weekMoodLabel.text = (round(sumWeek/countWeek*10)/10).description
+        //monthMoodLabel.text = (round(sumMonth/countMonth*10)/10).description
     }
-    
+
     
     // MARK: - Fetch Results Controller
     
@@ -94,20 +95,16 @@ class StatsViewController: UIViewController, MFMailComposeViewControllerDelegate
         
         let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
+        let entity = NSEntityDescription.entityForName("Team", inManagedObjectContext: self.managedObjectContext!)
         fetchRequest.entity = entity
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: false)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        // nadefinuji predikat
-        let teamPredicate = NSPredicate(format: "person.name like %@", selectedPerson!.name!)
-        fetchRequest.predicate = teamPredicate
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
@@ -144,7 +141,7 @@ class StatsViewController: UIViewController, MFMailComposeViewControllerDelegate
         let events = self.fetchedResultsController.fetchedObjects as! [Event]
         
         // 2
-        let exportFilePath = NSTemporaryDirectory() + "my_mood.csv"
+        let exportFilePath = NSTemporaryDirectory() + "export.csv"
         let exportFileURL = NSURL(fileURLWithPath: exportFilePath)
         NSFileManager.defaultManager().createFileAtPath(exportFilePath, contents: NSData(), attributes: nil)
         
@@ -183,8 +180,8 @@ class StatsViewController: UIViewController, MFMailComposeViewControllerDelegate
             
             let mailComposer = MFMailComposeViewController()
             mailComposer.mailComposeDelegate = self
-             
-            mailComposer.setSubject("Your data export from Happy Days aplication")
+            
+            mailComposer.setSubject("Data export from HappyDay aplication")
             let now = NSDate().description
             mailComposer.setMessageBody("Data export from \(now).)." , isHTML: false)
             
@@ -206,6 +203,4 @@ class StatsViewController: UIViewController, MFMailComposeViewControllerDelegate
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-
 }
-

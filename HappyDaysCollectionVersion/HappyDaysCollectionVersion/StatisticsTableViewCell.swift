@@ -10,10 +10,9 @@ import UIKit
 
 class StatisticsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var teamNameLabel: UILabel!
-    @IBOutlet weak var lastSevenRatingLabel: UILabel!
-    @IBOutlet weak var lastThirtyRatingLabel: UILabel!
-    @IBOutlet weak var last365RatingLabel: UILabel!
+    @IBOutlet weak var teamName: UILabel!
+    @IBOutlet weak var timeStamp: UILabel!
+    @IBOutlet weak var rating: UILabel!
 
     
     override func awakeFromNib() {

@@ -40,18 +40,25 @@ class RatingViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "verySadTouch" {
-            self.saveNewEvent(4.0)
-        } else if segue.identifier == "sadTouch" {
-            self.saveNewEvent(3.0)
-        } else if segue.identifier == "happyTouch" {
-            self.saveNewEvent(2.0)
-        } else if segue.identifier == "veryHappyTouch" {
-            self.saveNewEvent(1.0)
-        }
-        
         let statsController = (segue.destinationViewController as! UINavigationController).topViewController as! StatsViewController
         statsController.rootNavigationController = self.navigationController
+        statsController.selectedPerson = self.selectedPerson
+
+        
+        if segue.identifier == "verySadTouch" {
+            self.saveNewEvent(4.0)
+            statsController.selectedMood = 4
+        } else if segue.identifier == "sadTouch" {
+            self.saveNewEvent(3.0)
+            statsController.selectedMood = 3
+        } else if segue.identifier == "happyTouch" {
+            self.saveNewEvent(2.0)
+            statsController.selectedMood = 2
+        } else if segue.identifier == "veryHappyTouch" {
+            self.saveNewEvent(1.0)
+            statsController.selectedMood = 1
+        }
+        
 
     }
 
