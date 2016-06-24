@@ -18,6 +18,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
         self.selected = false
     }
     
+    /*
     override var selected : Bool {
         didSet {
             if selected{
@@ -29,4 +30,5 @@ class TeamCollectionViewCell: UICollectionViewCell {
             //self.backgroundColor = selected ? UIColor.whiteColor() : UIColor.blackColor()
         }
     }
+     */
 }

@@ -28,12 +28,18 @@ class PersonsCollectionViewController: UICollectionViewController, NSFetchedResu
             self.managedObjectContext = appDelegate.managedObjectContext
         }
         
-        newPersonButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newPersonClicked")
-        editPersonButton = UIBarButtonItem(title: "Edit", style: .Bordered, target:self, action: "editButtonClicked")
+        newPersonButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(PersonsCollectionViewController.newPersonClicked))
+        editPersonButton = UIBarButtonItem(title: "Edit", style: .Plain, target:self, action: #selector(PersonsCollectionViewController.editButtonClicked))
         
         
         navigationItem.rightBarButtonItems = [editPersonButton!]
         navigationItem.leftBarButtonItems = []
+    }
+    
+    /// This code is necessary for update of the items after some object name or image is changed
+    /// From some unknown reason is called Move instead of Update, hence this code is manually refresh the data
+    override func viewWillAppear(animated: Bool) {
+        collectionView?.reloadItemsAtIndexPaths(collectionView!.indexPathsForVisibleItems())
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {

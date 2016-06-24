@@ -16,8 +16,6 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
     var managedObjectContext: NSManagedObjectContext? = nil
     var newTeamButton: UIBarButtonItem? = nil
     var editTeamButton: UIBarButtonItem? = nil
-    var refreshButton: UIBarButtonItem? = nil
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,25 +25,22 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
             self.managedObjectContext = appDelegate.managedObjectContext
         }
         
-        newTeamButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newTeamClicked")
-        editTeamButton = UIBarButtonItem(title: "Edit", style: .Bordered, target:self, action: "editButtonClicked")
-        refreshButton = UIBarButtonItem(title: "Refresh", style: .Bordered, target:self, action: "refresh")
-
+        newTeamButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(TeamsCollectionViewController.newTeamClicked))
+        editTeamButton = UIBarButtonItem(title: "Edit", style: .Plain, target:self, action: #selector(TeamsCollectionViewController.editButtonClicked))
         
-        navigationItem.rightBarButtonItems = [editTeamButton!, refreshButton!]
+        navigationItem.rightBarButtonItems = [editTeamButton!]
         navigationItem.leftBarButtonItems = []
-
     }
     
     func refresh(){
         viewWillAppear(true)
     }
-    /*
+    
+    /// This code is necessary for update of the items after some object name or image is changed
+    /// From some unknown reason is called Move instead of Update, hence this code is manually refresh the data
     override func viewWillAppear(animated: Bool) {
-        _fetchedResultsController = nil
-        collectionView?.reloadData()
+        collectionView?.reloadItemsAtIndexPaths(collectionView!.indexPathsForVisibleItems())
     }
- */
 
     func newTeamClicked(){
         performSegueWithIdentifier("newTeam", sender: self)

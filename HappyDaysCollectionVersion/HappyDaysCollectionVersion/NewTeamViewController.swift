@@ -50,8 +50,7 @@ class NewTeamViewController: UIViewController, UIImagePickerControllerDelegate, 
                     editedTeam?.updateTeamWithName(teamName, andImage: imageView.image!)
                 }
                 
-                
-                //dismissViewControllerAnimated(true, completion: nil)
+                dismissViewControllerAnimated(true, completion: nil)
             } else {
                 nameTextField.becomeFirstResponder()
             }
