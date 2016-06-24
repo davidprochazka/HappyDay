@@ -121,17 +121,11 @@
                         </connections>
                     </collectionView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Happy Day" id="YB7-bi-COa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DHR-ck-Fwq">
-                            <connections>
-                                <segue destination="LyJ-Yu-MGD" kind="presentation" identifier="newTeam" id="fV5-hR-Iaz"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Happy Day" id="YB7-bi-COa"/>
                     <connections>
-                        <outlet property="addBtn" destination="DHR-ck-Fwq" id="eqg-6u-pMs"/>
                         <segue destination="gmB-hy-xko" kind="presentation" identifier="showStatistics" id="Nd8-PS-dDc"/>
                         <segue destination="LyJ-Yu-MGD" kind="presentation" identifier="editTeam" id="4kd-Ox-D5t"/>
+                        <segue destination="LyJ-Yu-MGD" kind="presentation" identifier="newTeam" id="wIj-Jx-TBR"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HbV-aW-vpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -438,15 +432,10 @@
                             <outlet property="delegate" destination="qgx-Vs-oAf" id="qjM-dt-9TZ"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ltU-Wm-X6B">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RnU-6y-DLo">
-                            <connections>
-                                <segue destination="Cse-6B-B6N" kind="presentation" identifier="newPerson" id="Z4d-p8-8Tr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ltU-Wm-X6B"/>
                     <connections>
                         <segue destination="Cse-6B-B6N" kind="presentation" identifier="editPerson" id="87F-rP-9OM"/>
+                        <segue destination="Cse-6B-B6N" kind="presentation" identifier="newPerson" id="wwP-R5-jGe"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4a-P4-CjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -571,8 +560,8 @@
         <image name="very-sad" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="wIj-Jx-TBR"/>
         <segue reference="Nd8-PS-dDc"/>
-        <segue reference="4kd-Ox-D5t"/>
-        <segue reference="87F-rP-9OM"/>
+        <segue reference="wwP-R5-jGe"/>
     </inferredMetricsTieBreakers>
 </document>

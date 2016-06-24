@@ -38,10 +38,15 @@ class NewPersonViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     @IBAction func save(sender: AnyObject) {
+        
         if let personName = nameTextField.text {
             if personName != "" {
-                Person.createPersonWithName(personName, andImage: imageView.image!, andTeam: selectedTeam!)
                 
+                if (editedPerson == nil){
+                    Person.createPersonWithName(personName, andImage: imageView.image!, andTeam: selectedTeam!)
+                } else {
+                    editedPerson?.updatePersonWithName(personName, andImage: imageView.image!, andTeam: selectedTeam!)
+                }
                 dismissViewControllerAnimated(true, completion: nil)
             } else {
                 nameTextField.becomeFirstResponder()

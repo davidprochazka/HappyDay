@@ -17,6 +17,9 @@ class PersonsCollectionViewController: UICollectionViewController, NSFetchedResu
     
     var managedObjectContext: NSManagedObjectContext? = nil
     
+    var newPersonButton: UIBarButtonItem? = nil
+    var editPersonButton: UIBarButtonItem? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,11 +27,104 @@ class PersonsCollectionViewController: UICollectionViewController, NSFetchedResu
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             self.managedObjectContext = appDelegate.managedObjectContext
         }
+        
+        newPersonButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newPersonClicked")
+        editPersonButton = UIBarButtonItem(title: "Edit", style: .Bordered, target:self, action: "editButtonClicked")
+        
+        
+        navigationItem.rightBarButtonItems = [editPersonButton!]
+        navigationItem.leftBarButtonItems = []
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        return !editing
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    func newPersonClicked(){
+        performSegueWithIdentifier("newPerson", sender: self)
+    }
+    
+    func editButtonClicked(){
+
+        setEditing(!editing, animated: true)
+
+        updateLeftButtonBarItems(editing)
+        
+        if (editing) {
+            editPersonButton?.title = "Done"
+        } else {
+            editPersonButton?.title = "Edit"
+        }
+
+
+    }
+    
+    func updateLeftButtonBarItems(editing: Bool){
+        if (editing){
+            navigationItem.leftBarButtonItems?.append(newPersonButton!)
+        } else {
+            navigationItem.leftBarButtonItems?.popLast()
+        }
+    }
+    
+    func editItem(object: NSManagedObject){
+        performSegueWithIdentifier("editPerson", sender: self)
+    }
+    
+    
+    func deleteItem(object: NSManagedObject){
+        let person = object as! Person
+        person.deletePerson()
+    }
+    
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        if (editing){
+            let cell = collectionView.cellForItemAtIndexPath(indexPath)
+            projectOptionsClick(cell!, indexPath: indexPath)
+        }
+    }
+    
+    func projectOptionsClick(cell: UICollectionViewCell, indexPath: NSIndexPath?) {
+        
+        let object = _fetchedResultsController?.objectAtIndexPath(indexPath!) as! NSManagedObject
+        
+        let optionMenu = UIAlertController(title: String(format: "Choose an action:"), message: "BlaBla", preferredStyle: .ActionSheet)
+        
+        let action = UIAlertAction(title: "Edit", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.editItem(object)
+        })
+        let action2 = UIAlertAction(title: "Delete", style: .Destructive, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.deleteItem(object)
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+        })
+        
+        optionMenu.addAction(action)
+        optionMenu.addAction(action2)
+        optionMenu.addAction(cancelAction)
+        
+        // Musi byt pro tablety
+        optionMenu.popoverPresentationController?.sourceView = cell
+        optionMenu.popoverPresentationController?.sourceRect = cell.bounds
+        optionMenu.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.Up
+        
+        presentViewController(optionMenu, animated: true, completion: nil)
+    }
+    
+    
+    
     
     
     // MARK: - Navigation
@@ -46,7 +142,19 @@ class PersonsCollectionViewController: UICollectionViewController, NSFetchedResu
                 let selectedPerson = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Person
                 ratingViewController.selectedPerson = selectedPerson
             }
+        } else if segue.identifier == "editPerson" {
+            let navigationViewController = segue.destinationViewController as! UINavigationController
+            let newPersonViewController = navigationViewController.childViewControllers[0] as! NewPersonViewController
+            
+            // Send selected person and team
+            if let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first {
+                let selectedPerson = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Person
+                newPersonViewController.editedPerson = selectedPerson
+            }
+            newPersonViewController.selectedTeam = self.selectedTeam
+
         }
+
     
     }
     
@@ -225,14 +333,5 @@ class PersonsCollectionViewController: UICollectionViewController, NSFetchedResu
             }, completion: { (finished) -> Void in
                 self.blockOperations.removeAll(keepCapacity: false)
         })
-    }
-    
-    deinit {
-        // Cancel all block operations when VC deallocates
-        for operation: NSBlockOperation in blockOperations {
-            operation.cancel()
-        }
-        
-        blockOperations.removeAll(keepCapacity: false)
     }
 }

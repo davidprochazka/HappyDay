@@ -45,4 +45,18 @@ class Team: NSManagedObject {
             abort()
         }
     }
+    
+    func updateTeamWithName(name: String, andImage image: UIImage){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext = appDelegate.managedObjectContext
+        
+        self.name = name
+        self.image = UIImagePNGRepresentation(image)
+        
+        do {
+            try managedObjectContext.save()
+        } catch {
+            abort()
+        }
+    }
 }

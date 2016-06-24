@@ -36,4 +36,31 @@ class Person: NSManagedObject {
         return newPerson
     }
     
+    func deletePerson(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext = appDelegate.managedObjectContext
+        
+        managedObjectContext.deleteObject(self)
+        
+        do {
+            try managedObjectContext.save()
+        } catch {
+            abort()
+        }
+    }
+    
+    func updatePersonWithName(name: String, andImage image: UIImage, andTeam team: Team){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext = appDelegate.managedObjectContext
+        
+        self.name = name
+        self.image = UIImagePNGRepresentation(image)
+        self.team = team;
+        
+        do {
+            try managedObjectContext.save()
+        } catch {
+            abort()
+        }
+    }
 }

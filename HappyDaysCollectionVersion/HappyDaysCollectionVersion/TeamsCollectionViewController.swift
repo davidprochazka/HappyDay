@@ -12,10 +12,12 @@ import CoreData
 private let reuseIdentifier = "TeamCell"
 
 class TeamsCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
-
-    @IBOutlet weak var addBtn: UIBarButtonItem!
     
     var managedObjectContext: NSManagedObjectContext? = nil
+    var newTeamButton: UIBarButtonItem? = nil
+    var editTeamButton: UIBarButtonItem? = nil
+    var refreshButton: UIBarButtonItem? = nil
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,35 +27,50 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
             self.managedObjectContext = appDelegate.managedObjectContext
         }
         
-        //statisticsButton = UIBarButtonItem(title: "Statistics", style: .Bordered, target:self, action: "statisticsButtonClick:")
-        
-        // collectionView.editing = true (setEDiting)
-        navigationItem.leftBarButtonItems = [editButtonItem()]
-    }
-
-    override func setEditing(editing: Bool, animated: Bool) {
-        super.setEditing(editing, animated: animated)
+        newTeamButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newTeamClicked")
+        editTeamButton = UIBarButtonItem(title: "Edit", style: .Bordered, target:self, action: "editButtonClicked")
+        refreshButton = UIBarButtonItem(title: "Refresh", style: .Bordered, target:self, action: "refresh")
 
         
-        if editing{
-            collectionView?.allowsMultipleSelection = false
+        navigationItem.rightBarButtonItems = [editTeamButton!, refreshButton!]
+        navigationItem.leftBarButtonItems = []
 
-            addBtn.enabled = false
-        } else {
-            addBtn.enabled = true
-
-        }
     }
     
+    func refresh(){
+        viewWillAppear(true)
+    }
     /*
-    func updateLeftButtonBarItems(editing: Bool){
-        if (editing){
-            navigationItem.leftBarButtonItems?.popLast()
+    override func viewWillAppear(animated: Bool) {
+        _fetchedResultsController = nil
+        collectionView?.reloadData()
+    }
+ */
+
+    func newTeamClicked(){
+        performSegueWithIdentifier("newTeam", sender: self)
+    }
+    
+    func editButtonClicked(){
+
+        setEditing(!editing, animated: true)
+        updateLeftButtonBarItems(editing)
+
+        if (editing) {
+            editTeamButton?.title = "Done"
         } else {
-            navigationItem.leftBarButtonItems?.append(statisticsButton!)
+            editTeamButton?.title = "Edit"
         }
     }
-     */
+
+    
+    func updateLeftButtonBarItems(editing: Bool){
+        if (editing){
+            navigationItem.leftBarButtonItems?.append(newTeamButton!)
+        } else {
+            navigationItem.leftBarButtonItems?.popLast()
+        }
+    }
     
     func editItem(object: NSManagedObject){
         performSegueWithIdentifier("editTeam", sender: self)
@@ -105,11 +122,6 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
     
     
     
-    func statisticsButtonClick(sender: UIBarButtonItem){
-        performSegueWithIdentifier("showStatistics", sender: nil)
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -141,7 +153,6 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         return !editing
     }
-
 
     // MARK: UICollectionViewDataSource
 
@@ -324,6 +335,7 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
                 self.blockOperations.removeAll(keepCapacity: false)
         })
     }
+
     
     deinit {
         // Cancel all block operations when VC deallocates
@@ -333,5 +345,4 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
         
         blockOperations.removeAll(keepCapacity: false)
     }
-
 }

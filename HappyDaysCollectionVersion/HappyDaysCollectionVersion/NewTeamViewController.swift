@@ -42,8 +42,16 @@ class NewTeamViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func save(sender: AnyObject) {
         if let teamName = nameTextField.text {
             if teamName != "" {
-                Team.createTeamWithName(teamName, andImage: imageView.image!)
-                dismissViewControllerAnimated(true, completion: nil)
+                
+                
+                if (editedTeam == nil){
+                    Team.createTeamWithName(teamName, andImage: imageView.image!)
+                } else {
+                    editedTeam?.updateTeamWithName(teamName, andImage: imageView.image!)
+                }
+                
+                
+                //dismissViewControllerAnimated(true, completion: nil)
             } else {
                 nameTextField.becomeFirstResponder()
             }
