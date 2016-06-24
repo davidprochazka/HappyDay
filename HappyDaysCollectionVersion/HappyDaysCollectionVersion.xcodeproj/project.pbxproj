@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		870B08E11CF58FEC0027400E /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870B08E01CF58FEC0027400E /* StatisticsTableViewCell.swift */; };
+		875614441CE22F6800DA0186 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875614431CE22F6800DA0186 /* AppDelegate.swift */; };
+		875614491CE22F6800DA0186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875614471CE22F6800DA0186 /* Main.storyboard */; };
+		8756144C1CE22F6800DA0186 /* HappyDaysCollectionVersion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8756144A1CE22F6800DA0186 /* HappyDaysCollectionVersion.xcdatamodeld */; };
+		8756144E1CE22F6800DA0186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8756144D1CE22F6800DA0186 /* Assets.xcassets */; };
+		875614511CE22F6800DA0186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8756144F1CE22F6800DA0186 /* LaunchScreen.storyboard */; };
+		8756145C1CE22F6800DA0186 /* HappyDaysCollectionVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8756145B1CE22F6800DA0186 /* HappyDaysCollectionVersionTests.swift */; };
+		875614671CE22F6800DA0186 /* HappyDaysCollectionVersionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875614661CE22F6800DA0186 /* HappyDaysCollectionVersionUITests.swift */; };
+		875614751CE22FE200DA0186 /* TeamsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875614741CE22FE200DA0186 /* TeamsCollectionViewController.swift */; };
+		875614771CE2302500DA0186 /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875614761CE2302500DA0186 /* TeamCollectionViewCell.swift */; };
+		8798325A1CF4AC2C00A49D86 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879832591CF4AC2C00A49D86 /* RatingViewController.swift */; };
+		8798325C1CF4AFD200A49D86 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8798325B1CF4AFD200A49D86 /* StatsViewController.swift */; };
+		87E8BC171CEDF4C000869A4A /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC111CEDF4C000869A4A /* Person+CoreDataProperties.swift */; };
+		87E8BC181CEDF4C000869A4A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC121CEDF4C000869A4A /* Person.swift */; };
+		87E8BC191CEDF4C000869A4A /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC131CEDF4C000869A4A /* Event+CoreDataProperties.swift */; };
+		87E8BC1A1CEDF4C000869A4A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC141CEDF4C000869A4A /* Event.swift */; };
+		87E8BC1B1CEDF4C000869A4A /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC151CEDF4C000869A4A /* Team+CoreDataProperties.swift */; };
+		87E8BC1C1CEDF4C000869A4A /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC161CEDF4C000869A4A /* Team.swift */; };
+		87E8BC1E1CEDFBFF00869A4A /* NewTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC1D1CEDFBFF00869A4A /* NewTeamViewController.swift */; };
+		87E8BC231CEE137800869A4A /* PersonsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC221CEE137800869A4A /* PersonsCollectionViewController.swift */; };
+		87E8BC251CEE13AF00869A4A /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC241CEE13AF00869A4A /* PersonCollectionViewCell.swift */; };
+		87E8BC271CEE165E00869A4A /* NewPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC261CEE165E00869A4A /* NewPersonViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		875614581CE22F6800DA0186 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 875614381CE22F6800DA0186 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8756143F1CE22F6800DA0186;
+			remoteInfo = HappyDaysCollectionVersion;
+		};
+		875614631CE22F6800DA0186 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 875614381CE22F6800DA0186 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8756143F1CE22F6800DA0186;
+			remoteInfo = HappyDaysCollectionVersion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		870B08E01CF58FEC0027400E /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		875614401CE22F6800DA0186 /* HappyDaysCollectionVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyDaysCollectionVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		875614431CE22F6800DA0186 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		875614481CE22F6800DA0186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8756144B1CE22F6800DA0186 /* HappyDaysCollectionVersion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HappyDaysCollectionVersion.xcdatamodel; sourceTree = "<group>"; };
+		8756144D1CE22F6800DA0186 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		875614501CE22F6800DA0186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		875614521CE22F6800DA0186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875614571CE22F6800DA0186 /* HappyDaysCollectionVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyDaysCollectionVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8756145B1CE22F6800DA0186 /* HappyDaysCollectionVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyDaysCollectionVersionTests.swift; sourceTree = "<group>"; };
+		8756145D1CE22F6800DA0186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875614621CE22F6800DA0186 /* HappyDaysCollectionVersionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyDaysCollectionVersionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		875614661CE22F6800DA0186 /* HappyDaysCollectionVersionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyDaysCollectionVersionUITests.swift; sourceTree = "<group>"; };
+		875614681CE22F6800DA0186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875614741CE22FE200DA0186 /* TeamsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsCollectionViewController.swift; sourceTree = "<group>"; };
+		875614761CE2302500DA0186 /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
+		879832591CF4AC2C00A49D86 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		8798325B1CF4AFD200A49D86 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		87E8BC111CEDF4C000869A4A /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		87E8BC121CEDF4C000869A4A /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		87E8BC131CEDF4C000869A4A /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		87E8BC141CEDF4C000869A4A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		87E8BC151CEDF4C000869A4A /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		87E8BC161CEDF4C000869A4A /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		87E8BC1D1CEDFBFF00869A4A /* NewTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTeamViewController.swift; sourceTree = "<group>"; };
+		87E8BC221CEE137800869A4A /* PersonsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsCollectionViewController.swift; sourceTree = "<group>"; };
+		87E8BC241CEE13AF00869A4A /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
+		87E8BC261CEE165E00869A4A /* NewPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPersonViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8756143D1CE22F6800DA0186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875614541CE22F6800DA0186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8756145F1CE22F6800DA0186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		875614371CE22F6800DA0186 = {
+			isa = PBXGroup;
+			children = (
+				875614421CE22F6800DA0186 /* HappyDaysCollectionVersion */,
+				8756145A1CE22F6800DA0186 /* HappyDaysCollectionVersionTests */,
+				875614651CE22F6800DA0186 /* HappyDaysCollectionVersionUITests */,
+				875614411CE22F6800DA0186 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		875614411CE22F6800DA0186 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				875614401CE22F6800DA0186 /* HappyDaysCollectionVersion.app */,
+				875614571CE22F6800DA0186 /* HappyDaysCollectionVersionTests.xctest */,
+				875614621CE22F6800DA0186 /* HappyDaysCollectionVersionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		875614421CE22F6800DA0186 /* HappyDaysCollectionVersion */ = {
+			isa = PBXGroup;
+			children = (
+				8756144F1CE22F6800DA0186 /* LaunchScreen.storyboard */,
+				875614471CE22F6800DA0186 /* Main.storyboard */,
+				8756144A1CE22F6800DA0186 /* HappyDaysCollectionVersion.xcdatamodeld */,
+				875614431CE22F6800DA0186 /* AppDelegate.swift */,
+				87E8BC1F1CEE120900869A4A /* Teams */,
+				87E8BC201CEE122600869A4A /* Persons */,
+				87E8BC211CEE123A00869A4A /* Rating */,
+				8756144D1CE22F6800DA0186 /* Assets.xcassets */,
+				875614521CE22F6800DA0186 /* Info.plist */,
+			);
+			path = HappyDaysCollectionVersion;
+			sourceTree = "<group>";
+		};
+		8756145A1CE22F6800DA0186 /* HappyDaysCollectionVersionTests */ = {
+			isa = PBXGroup;
+			children = (
+				8756145B1CE22F6800DA0186 /* HappyDaysCollectionVersionTests.swift */,
+				8756145D1CE22F6800DA0186 /* Info.plist */,
+			);
+			path = HappyDaysCollectionVersionTests;
+			sourceTree = "<group>";
+		};
+		875614651CE22F6800DA0186 /* HappyDaysCollectionVersionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				875614661CE22F6800DA0186 /* HappyDaysCollectionVersionUITests.swift */,
+				875614681CE22F6800DA0186 /* Info.plist */,
+			);
+			path = HappyDaysCollectionVersionUITests;
+			sourceTree = "<group>";
+		};
+		87E8BC1F1CEE120900869A4A /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				87E8BC151CEDF4C000869A4A /* Team+CoreDataProperties.swift */,
+				87E8BC161CEDF4C000869A4A /* Team.swift */,
+				87E8BC1D1CEDFBFF00869A4A /* NewTeamViewController.swift */,
+				875614761CE2302500DA0186 /* TeamCollectionViewCell.swift */,
+				875614741CE22FE200DA0186 /* TeamsCollectionViewController.swift */,
+			);
+			name = Teams;
+			sourceTree = "<group>";
+		};
+		87E8BC201CEE122600869A4A /* Persons */ = {
+			isa = PBXGroup;
+			children = (
+				87E8BC111CEDF4C000869A4A /* Person+CoreDataProperties.swift */,
+				87E8BC121CEDF4C000869A4A /* Person.swift */,
+				87E8BC261CEE165E00869A4A /* NewPersonViewController.swift */,
+				87E8BC241CEE13AF00869A4A /* PersonCollectionViewCell.swift */,
+				87E8BC221CEE137800869A4A /* PersonsCollectionViewController.swift */,
+			);
+			name = Persons;
+			sourceTree = "<group>";
+		};
+		87E8BC211CEE123A00869A4A /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				87E8BC131CEDF4C000869A4A /* Event+CoreDataProperties.swift */,
+				87E8BC141CEDF4C000869A4A /* Event.swift */,
+				879832591CF4AC2C00A49D86 /* RatingViewController.swift */,
+				8798325B1CF4AFD200A49D86 /* StatsViewController.swift */,
+				870B08E01CF58FEC0027400E /* StatisticsTableViewCell.swift */,
+			);
+			name = Rating;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8756143F1CE22F6800DA0186 /* HappyDaysCollectionVersion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8756146B1CE22F6800DA0186 /* Build configuration list for PBXNativeTarget "HappyDaysCollectionVersion" */;
+			buildPhases = (
+				8756143C1CE22F6800DA0186 /* Sources */,
+				8756143D1CE22F6800DA0186 /* Frameworks */,
+				8756143E1CE22F6800DA0186 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyDaysCollectionVersion;
+			productName = HappyDaysCollectionVersion;
+			productReference = 875614401CE22F6800DA0186 /* HappyDaysCollectionVersion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		875614561CE22F6800DA0186 /* HappyDaysCollectionVersionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8756146E1CE22F6800DA0186 /* Build configuration list for PBXNativeTarget "HappyDaysCollectionVersionTests" */;
+			buildPhases = (
+				875614531CE22F6800DA0186 /* Sources */,
+				875614541CE22F6800DA0186 /* Frameworks */,
+				875614551CE22F6800DA0186 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				875614591CE22F6800DA0186 /* PBXTargetDependency */,
+			);
+			name = HappyDaysCollectionVersionTests;
+			productName = HappyDaysCollectionVersionTests;
+			productReference = 875614571CE22F6800DA0186 /* HappyDaysCollectionVersionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		875614611CE22F6800DA0186 /* HappyDaysCollectionVersionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 875614711CE22F6800DA0186 /* Build configuration list for PBXNativeTarget "HappyDaysCollectionVersionUITests" */;
+			buildPhases = (
+				8756145E1CE22F6800DA0186 /* Sources */,
+				8756145F1CE22F6800DA0186 /* Frameworks */,
+				875614601CE22F6800DA0186 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				875614641CE22F6800DA0186 /* PBXTargetDependency */,
+			);
+			name = HappyDaysCollectionVersionUITests;
+			productName = HappyDaysCollectionVersionUITests;
+			productReference = 875614621CE22F6800DA0186 /* HappyDaysCollectionVersionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		875614381CE22F6800DA0186 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "David Prochazka";
+				TargetAttributes = {
+					8756143F1CE22F6800DA0186 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					875614561CE22F6800DA0186 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 8756143F1CE22F6800DA0186;
+					};
+					875614611CE22F6800DA0186 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 8756143F1CE22F6800DA0186;
+					};
+				};
+			};
+			buildConfigurationList = 8756143B1CE22F6800DA0186 /* Build configuration list for PBXProject "HappyDaysCollectionVersion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 875614371CE22F6800DA0186;
+			productRefGroup = 875614411CE22F6800DA0186 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8756143F1CE22F6800DA0186 /* HappyDaysCollectionVersion */,
+				875614561CE22F6800DA0186 /* HappyDaysCollectionVersionTests */,
+				875614611CE22F6800DA0186 /* HappyDaysCollectionVersionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8756143E1CE22F6800DA0186 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				875614511CE22F6800DA0186 /* LaunchScreen.storyboard in Resources */,
+				8756144E1CE22F6800DA0186 /* Assets.xcassets in Resources */,
+				875614491CE22F6800DA0186 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875614551CE22F6800DA0186 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875614601CE22F6800DA0186 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8756143C1CE22F6800DA0186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E8BC1A1CEDF4C000869A4A /* Event.swift in Sources */,
+				87E8BC181CEDF4C000869A4A /* Person.swift in Sources */,
+				8798325C1CF4AFD200A49D86 /* StatsViewController.swift in Sources */,
+				8756144C1CE22F6800DA0186 /* HappyDaysCollectionVersion.xcdatamodeld in Sources */,
+				87E8BC1B1CEDF4C000869A4A /* Team+CoreDataProperties.swift in Sources */,
+				870B08E11CF58FEC0027400E /* StatisticsTableViewCell.swift in Sources */,
+				87E8BC171CEDF4C000869A4A /* Person+CoreDataProperties.swift in Sources */,
+				87E8BC191CEDF4C000869A4A /* Event+CoreDataProperties.swift in Sources */,
+				8798325A1CF4AC2C00A49D86 /* RatingViewController.swift in Sources */,
+				875614771CE2302500DA0186 /* TeamCollectionViewCell.swift in Sources */,
+				875614441CE22F6800DA0186 /* AppDelegate.swift in Sources */,
+				87E8BC1C1CEDF4C000869A4A /* Team.swift in Sources */,
+				87E8BC231CEE137800869A4A /* PersonsCollectionViewController.swift in Sources */,
+				87E8BC271CEE165E00869A4A /* NewPersonViewController.swift in Sources */,
+				875614751CE22FE200DA0186 /* TeamsCollectionViewController.swift in Sources */,
+				87E8BC1E1CEDFBFF00869A4A /* NewTeamViewController.swift in Sources */,
+				87E8BC251CEE13AF00869A4A /* PersonCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875614531CE22F6800DA0186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8756145C1CE22F6800DA0186 /* HappyDaysCollectionVersionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8756145E1CE22F6800DA0186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				875614671CE22F6800DA0186 /* HappyDaysCollectionVersionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		875614591CE22F6800DA0186 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8756143F1CE22F6800DA0186 /* HappyDaysCollectionVersion */;
+			targetProxy = 875614581CE22F6800DA0186 /* PBXContainerItemProxy */;
+		};
+		875614641CE22F6800DA0186 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8756143F1CE22F6800DA0186 /* HappyDaysCollectionVersion */;
+			targetProxy = 875614631CE22F6800DA0186 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		875614471CE22F6800DA0186 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				875614481CE22F6800DA0186 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8756144F1CE22F6800DA0186 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				875614501CE22F6800DA0186 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		875614691CE22F6800DA0186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8756146A1CE22F6800DA0186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8756146C1CE22F6800DA0186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HappyDaysCollectionVersion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mendelu.AngryDriver.HappyDaysCollectionVersion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8756146D1CE22F6800DA0186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HappyDaysCollectionVersion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mendelu.AngryDriver.HappyDaysCollectionVersion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8756146F1CE22F6800DA0186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HappyDaysCollectionVersionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mendelu.AngryDriver.HappyDaysCollectionVersionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyDaysCollectionVersion.app/HappyDaysCollectionVersion";
+			};
+			name = Debug;
+		};
+		875614701CE22F6800DA0186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HappyDaysCollectionVersionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mendelu.AngryDriver.HappyDaysCollectionVersionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyDaysCollectionVersion.app/HappyDaysCollectionVersion";
+			};
+			name = Release;
+		};
+		875614721CE22F6800DA0186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HappyDaysCollectionVersionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mendelu.AngryDriver.HappyDaysCollectionVersionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HappyDaysCollectionVersion;
+			};
+			name = Debug;
+		};
+		875614731CE22F6800DA0186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HappyDaysCollectionVersionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mendelu.AngryDriver.HappyDaysCollectionVersionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HappyDaysCollectionVersion;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8756143B1CE22F6800DA0186 /* Build configuration list for PBXProject "HappyDaysCollectionVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				875614691CE22F6800DA0186 /* Debug */,
+				8756146A1CE22F6800DA0186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8756146B1CE22F6800DA0186 /* Build configuration list for PBXNativeTarget "HappyDaysCollectionVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8756146C1CE22F6800DA0186 /* Debug */,
+				8756146D1CE22F6800DA0186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8756146E1CE22F6800DA0186 /* Build configuration list for PBXNativeTarget "HappyDaysCollectionVersionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8756146F1CE22F6800DA0186 /* Debug */,
+				875614701CE22F6800DA0186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		875614711CE22F6800DA0186 /* Build configuration list for PBXNativeTarget "HappyDaysCollectionVersionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				875614721CE22F6800DA0186 /* Debug */,
+				875614731CE22F6800DA0186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8756144A1CE22F6800DA0186 /* HappyDaysCollectionVersion.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8756144B1CE22F6800DA0186 /* HappyDaysCollectionVersion.xcdatamodel */,
+			);
+			currentVersion = 8756144B1CE22F6800DA0186 /* HappyDaysCollectionVersion.xcdatamodel */;
+			path = HappyDaysCollectionVersion.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 875614381CE22F6800DA0186 /* Project object */;
+}
