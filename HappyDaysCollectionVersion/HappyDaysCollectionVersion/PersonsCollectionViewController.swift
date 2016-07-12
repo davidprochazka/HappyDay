@@ -34,6 +34,8 @@ class PersonsCollectionViewController: UICollectionViewController, NSFetchedResu
         
         navigationItem.rightBarButtonItems = [editPersonButton!]
         navigationItem.leftBarButtonItems = []
+        
+        navigationItem.title = selectedTeam!.name
     }
     
     /// This code is necessary for update of the items after some object name or image is changed
@@ -139,10 +141,11 @@ class PersonsCollectionViewController: UICollectionViewController, NSFetchedResu
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "newPerson" {
-            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! NewPersonViewController
+            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! PersonDetailViewController
             controller.selectedTeam = self.selectedTeam
         } else if segue.identifier == "personSelected" {
-            let ratingViewController = segue.destinationViewController as! RatingViewController
+            let navCtrl = segue.destinationViewController as! UINavigationController
+            let ratingViewController = navCtrl.childViewControllers[0] as! RatingViewController
             // Send selected team
             if let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first {
                 let selectedPerson = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Person
@@ -150,7 +153,7 @@ class PersonsCollectionViewController: UICollectionViewController, NSFetchedResu
             }
         } else if segue.identifier == "editPerson" {
             let navigationViewController = segue.destinationViewController as! UINavigationController
-            let newPersonViewController = navigationViewController.childViewControllers[0] as! NewPersonViewController
+            let newPersonViewController = navigationViewController.childViewControllers[0] as! PersonDetailViewController
             
             // Send selected person and team
             if let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first {
@@ -186,7 +189,12 @@ class PersonsCollectionViewController: UICollectionViewController, NSFetchedResu
         let fetchedPerson = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Person
         
         let imageData = fetchedPerson.image
-        personCell.personImage.image = UIImage(data: imageData!)
+        if imageData != nil {
+            personCell.personImage.image = UIImage(data: imageData!)
+        }else{
+            personCell.personImage.image = UIImage(named: "businessman-outline")
+        }
+        
         personCell.personLabel?.text = (fetchedPerson.name)
     }
     

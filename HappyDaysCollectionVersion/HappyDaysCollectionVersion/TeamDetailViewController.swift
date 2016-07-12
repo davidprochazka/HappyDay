@@ -1,52 +1,57 @@
 //
-//  NewPersonViewController.swift
-//  HappyDaysCollectionVersion
+//  NewTeamViewController.swift
+//  HappyDay
 //
-//  Created by David Prochazka on 19/05/16.
+//  Created by David Prochazka on 09/03/16.
 //  Copyright © 2016 David Prochazka. All rights reserved.
 //
 
 import UIKit
 import MobileCoreServices
 
-class NewPersonViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+class TeamDetailViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
-    var selectedTeam : Team? = nil
-    var editedPerson : Person? = nil
-
+    var editedTeam: Team? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if (editedPerson != nil){
-            navigationController?.navigationBar.topItem?.title = "Edit your person"
+        
+        if (editedTeam != nil){
+            navigationController?.navigationBar.topItem?.title = "Edit your Team"
+        
             fillForm()
         }
         // Do any additional setup after loading the view.
     }
     
     func fillForm(){
-        nameTextField.text = editedPerson?.name
-        imageView.image = UIImage(data: editedPerson!.image!)
+        nameTextField.text = editedTeam?.name
+        
+        if editedTeam!.image != nil {
+            imageView.image = UIImage(data: editedTeam!.image!)
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func save(sender: AnyObject) {
-        
-        if let personName = nameTextField.text {
-            if personName != "" {
+        if let teamName = nameTextField.text {
+            if teamName != "" {
                 
-                if (editedPerson == nil){
-                    Person.createPersonWithName(personName, andImage: imageView.image!, andTeam: selectedTeam!)
+                
+                if (editedTeam == nil){
+                    Team.createTeamWithName(teamName, andImage: imageView.image)
                 } else {
-                    editedPerson?.updatePersonWithName(personName, andImage: imageView.image!, andTeam: selectedTeam!)
+                    editedTeam?.updateTeamWithName(teamName, andImage: imageView.image)
                 }
+                
                 dismissViewControllerAnimated(true, completion: nil)
             } else {
                 nameTextField.becomeFirstResponder()
@@ -84,5 +89,4 @@ class NewPersonViewController: UIViewController, UIImagePickerControllerDelegate
     func imagePickerControllerDidCancel(picker: UIImagePickerController){
         dismissViewControllerAnimated(true, completion: nil)
     }
-
 }

@@ -135,7 +135,7 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
             }
         } else if segue.identifier == "editTeam" {
             let navigationViewController = segue.destinationViewController as! UINavigationController
-            let newTeamViewController = navigationViewController.childViewControllers[0] as! NewTeamViewController
+            let newTeamViewController = navigationViewController.childViewControllers[0] as! TeamDetailViewController
 
             // Send selected team
             if let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first {
@@ -171,7 +171,12 @@ class TeamsCollectionViewController: UICollectionViewController, NSFetchedResult
         let fetchedTeam = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Team
         
         let imageData = fetchedTeam.image
-        teamCell.teamImage.image = UIImage(data: imageData!)
+        if imageData != nil {
+            teamCell.teamImage.image = UIImage(data: imageData!)
+        }else{
+            teamCell.teamImage.image = UIImage(named: "hamster")
+        }
+        
         teamCell.teamLabel?.text = (fetchedTeam.name)
     }
     

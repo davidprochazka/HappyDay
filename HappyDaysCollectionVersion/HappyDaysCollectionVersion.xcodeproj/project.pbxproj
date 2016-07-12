@@ -26,10 +26,10 @@
 		87E8BC1A1CEDF4C000869A4A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC141CEDF4C000869A4A /* Event.swift */; };
 		87E8BC1B1CEDF4C000869A4A /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC151CEDF4C000869A4A /* Team+CoreDataProperties.swift */; };
 		87E8BC1C1CEDF4C000869A4A /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC161CEDF4C000869A4A /* Team.swift */; };
-		87E8BC1E1CEDFBFF00869A4A /* NewTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC1D1CEDFBFF00869A4A /* NewTeamViewController.swift */; };
+		87E8BC1E1CEDFBFF00869A4A /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC1D1CEDFBFF00869A4A /* TeamDetailViewController.swift */; };
 		87E8BC231CEE137800869A4A /* PersonsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC221CEE137800869A4A /* PersonsCollectionViewController.swift */; };
 		87E8BC251CEE13AF00869A4A /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC241CEE13AF00869A4A /* PersonCollectionViewCell.swift */; };
-		87E8BC271CEE165E00869A4A /* NewPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC261CEE165E00869A4A /* NewPersonViewController.swift */; };
+		87E8BC271CEE165E00869A4A /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8BC261CEE165E00869A4A /* PersonDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,10 +75,10 @@
 		87E8BC141CEDF4C000869A4A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		87E8BC151CEDF4C000869A4A /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		87E8BC161CEDF4C000869A4A /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		87E8BC1D1CEDFBFF00869A4A /* NewTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTeamViewController.swift; sourceTree = "<group>"; };
+		87E8BC1D1CEDFBFF00869A4A /* TeamDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 		87E8BC221CEE137800869A4A /* PersonsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsCollectionViewController.swift; sourceTree = "<group>"; };
 		87E8BC241CEE13AF00869A4A /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
-		87E8BC261CEE165E00869A4A /* NewPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPersonViewController.swift; sourceTree = "<group>"; };
+		87E8BC261CEE165E00869A4A /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +175,7 @@
 			children = (
 				87E8BC151CEDF4C000869A4A /* Team+CoreDataProperties.swift */,
 				87E8BC161CEDF4C000869A4A /* Team.swift */,
-				87E8BC1D1CEDFBFF00869A4A /* NewTeamViewController.swift */,
+				87E8BC1D1CEDFBFF00869A4A /* TeamDetailViewController.swift */,
 				875614761CE2302500DA0186 /* TeamCollectionViewCell.swift */,
 				875614741CE22FE200DA0186 /* TeamsCollectionViewController.swift */,
 			);
@@ -187,7 +187,7 @@
 			children = (
 				87E8BC111CEDF4C000869A4A /* Person+CoreDataProperties.swift */,
 				87E8BC121CEDF4C000869A4A /* Person.swift */,
-				87E8BC261CEE165E00869A4A /* NewPersonViewController.swift */,
+				87E8BC261CEE165E00869A4A /* PersonDetailViewController.swift */,
 				87E8BC241CEE13AF00869A4A /* PersonCollectionViewCell.swift */,
 				87E8BC221CEE137800869A4A /* PersonsCollectionViewController.swift */,
 			);
@@ -349,10 +349,10 @@
 				875614441CE22F6800DA0186 /* AppDelegate.swift in Sources */,
 				87E8BC1C1CEDF4C000869A4A /* Team.swift in Sources */,
 				87E8BC231CEE137800869A4A /* PersonsCollectionViewController.swift in Sources */,
-				87E8BC271CEE165E00869A4A /* NewPersonViewController.swift in Sources */,
+				87E8BC271CEE165E00869A4A /* PersonDetailViewController.swift in Sources */,
 				8741974A1D1DA6AE001190F3 /* StatisticsTableViewController.swift in Sources */,
 				875614751CE22FE200DA0186 /* TeamsCollectionViewController.swift in Sources */,
-				87E8BC1E1CEDFBFF00869A4A /* NewTeamViewController.swift in Sources */,
+				87E8BC1E1CEDFBFF00869A4A /* TeamDetailViewController.swift in Sources */,
 				87E8BC251CEE13AF00869A4A /* PersonCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

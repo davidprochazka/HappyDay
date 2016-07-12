@@ -16,7 +16,7 @@ class Person: NSManagedObject {
 // Insert code here to add functionality to your managed object subclass
 
     // factory method that creates a team with required information
-    static func createPersonWithName(name: String, andImage image: UIImage, andTeam team: Team) -> Person {
+    static func createPersonWithName(name: String, andImage image: UIImage?, andTeam team: Team) -> Person {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedObjectContext = appDelegate.managedObjectContext
         
@@ -24,7 +24,9 @@ class Person: NSManagedObject {
         let newPerson = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext) as! Person
         
         newPerson.name = name
-        newPerson.image = UIImagePNGRepresentation(image)
+        if image != nil {
+            newPerson.image = UIImagePNGRepresentation(image!)
+        }
         newPerson.team = team;
         
         do {
@@ -49,12 +51,14 @@ class Person: NSManagedObject {
         }
     }
     
-    func updatePersonWithName(name: String, andImage image: UIImage, andTeam team: Team){
+    func updatePersonWithName(name: String, andImage image: UIImage?, andTeam team: Team){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedObjectContext = appDelegate.managedObjectContext
         
         self.name = name
-        self.image = UIImagePNGRepresentation(image)
+        if image != nil {
+            self.image = UIImagePNGRepresentation(image!)
+        }
         self.team = team;
         
         do {

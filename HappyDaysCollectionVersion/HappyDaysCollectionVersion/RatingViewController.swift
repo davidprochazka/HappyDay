@@ -62,4 +62,7 @@ class RatingViewController: UIViewController {
 
     }
 
+    @IBAction func closeClick(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

@@ -14,7 +14,7 @@ import UIKit
 class Team: NSManagedObject {
 
     // factory method that creates a team with required information
-    static func createTeamWithName(name: String, andImage image: UIImage) -> Team {
+    static func createTeamWithName(name: String, andImage image: UIImage?) -> Team {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedObjectContext = appDelegate.managedObjectContext
         
@@ -22,7 +22,10 @@ class Team: NSManagedObject {
         let newTeam = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext) as! Team
         
         newTeam.name = name
-        newTeam.image = UIImagePNGRepresentation(image)
+        
+        if image != nil {
+            newTeam.image = UIImagePNGRepresentation(image!)
+        }
         
         do {
             try managedObjectContext.save()
@@ -46,12 +49,15 @@ class Team: NSManagedObject {
         }
     }
     
-    func updateTeamWithName(name: String, andImage image: UIImage){
+    func updateTeamWithName(name: String, andImage image: UIImage?){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedObjectContext = appDelegate.managedObjectContext
         
         self.name = name
-        self.image = UIImagePNGRepresentation(image)
+        
+        if image != nil {
+            self.image = UIImagePNGRepresentation(image!)
+        }
         
         do {
             try managedObjectContext.save()
