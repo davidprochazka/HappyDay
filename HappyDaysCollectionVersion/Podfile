@@ -1,0 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/AliSoftware/UIImage-Resize'
+
+platform :ios, "8.0"
+use_frameworks!
+
+target 'HappyDaysCollectionVersion' do
+pod 'UIImage-Resize', '~> 1.0.1'
+end
+

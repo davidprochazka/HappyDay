@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+import UIImage_Resize
 
 class PersonDetailViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -75,10 +76,18 @@ class PersonDetailViewController: UITableViewController, UIImagePickerController
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
+        var image: UIImage? = nil
+        
         if let possibleImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
-            imageView.image = possibleImage
+            image = possibleImage
         } else if let possibleImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-            imageView.image = possibleImage
+            image = possibleImage
+        }
+        
+        if image != nil {
+            // resize image
+            let size = CGSize(width: config.imageSize.width, height: config.imageSize.height)
+            imageView.image = image!.resizedImageToFitInSize(size, scaleIfSmaller: false)
         }
         
         dismissViewControllerAnimated(true, completion: nil)
