@@ -10,13 +10,18 @@ import UIKit
 import CoreData
 import MessageUI
 
+protocol StatsViewControllerDelegate {
+    func didCloseStats()
+}
+
 class StatsViewController: UIViewController, MFMailComposeViewControllerDelegate, NSFetchedResultsControllerDelegate {
-        
-    var rootNavigationController: UINavigationController? = nil
+    
     var managedObjectContext: NSManagedObjectContext? = nil
     var selectedPerson: Person? = nil
     
     var selectedMood: Int? = nil
+    
+    var delegate: StatsViewControllerDelegate? = nil
 
     @IBOutlet weak var currentMoodLabel: UILabel!
     @IBOutlet weak var weekMoodLabel: UILabel!
@@ -40,12 +45,8 @@ class StatsViewController: UIViewController, MFMailComposeViewControllerDelegate
     }
 
     @IBAction func closeClicked(sender: AnyObject) {
+        delegate?.didCloseStats()
         dismissViewControllerAnimated(true, completion: nil)
-        
-        // je naplneny hodnotou pouze pokud se na stranku statistik dostanu z pridani nove udalosti
-        if self.rootNavigationController != nil{
-            self.rootNavigationController!.popToRootViewControllerAnimated(true)
-        }
     }
 
     // MARK: - Calculcations

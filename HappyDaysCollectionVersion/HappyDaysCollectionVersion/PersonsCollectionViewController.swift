@@ -144,8 +144,7 @@ class PersonsCollectionViewController: UICollectionViewController, NSFetchedResu
             let controller = (segue.destinationViewController as! UINavigationController).topViewController as! PersonDetailViewController
             controller.selectedTeam = self.selectedTeam
         } else if segue.identifier == "personSelected" {
-            let navCtrl = segue.destinationViewController as! UINavigationController
-            let ratingViewController = navCtrl.childViewControllers[0] as! RatingViewController
+            let ratingViewController = segue.destinationViewController as! RatingViewController
             // Send selected team
             if let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first {
                 let selectedPerson = self.fetchedResultsController.objectAtIndexPath(indexPath) as! Person

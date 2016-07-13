@@ -376,13 +376,6 @@
                             <constraint firstItem="kmk-5r-2I4" firstAttribute="centerX" secondItem="mM9-fE-PX1" secondAttribute="centerX" id="q8z-ui-EHH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Utv-t3-1ax">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="9gk-0u-EeO">
-                            <connections>
-                                <action selector="closeClick:" destination="L64-gi-hk2" id="qFN-ol-oe5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBr-Rl-1AV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="HrX-3t-CVn" userLabel="very happy touch">
@@ -406,7 +399,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2608" y="92"/>
+            <point key="canvasLocation" x="1770" y="92"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="0Oc-RA-lx1">
@@ -488,7 +481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkq-tM-lZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="1815"/>
+            <point key="canvasLocation" x="1770" y="1815"/>
         </scene>
         <!--Persons Collection View Controller-->
         <scene sceneID="6Sm-m1-cPr">
@@ -543,7 +536,7 @@
                                 <connections>
                                     <outlet property="personImage" destination="acu-cg-mrh" id="kuD-Wo-myi"/>
                                     <outlet property="personLabel" destination="jYr-jg-50y" id="s1c-t7-r8Y"/>
-                                    <segue destination="ma6-dV-bpl" kind="presentation" identifier="personSelected" id="J9T-XI-eSa"/>
+                                    <segue destination="L64-gi-hk2" kind="show" identifier="personSelected" id="e5m-GZ-DJK"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -689,7 +682,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92a-RS-XUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2608" y="967"/>
+            <point key="canvasLocation" x="1770" y="967"/>
         </scene>
         <!--Teams-->
         <scene sceneID="QfS-xW-jhb">
@@ -729,24 +722,6 @@
             </objects>
             <point key="canvasLocation" x="-656" y="967"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="EwC-20-YfK">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ma6-dV-bpl" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1E7-v4-gtR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="L64-gi-hk2" kind="relationship" relationship="rootViewController" id="n7U-3h-fqc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l9I-Lu-rux" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1796" y="92"/>
-        </scene>
     </scenes>
     <resources>
         <image name="happy" width="512" height="512"/>
@@ -757,6 +732,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="wIj-Jx-TBR"/>
         <segue reference="87F-rP-9OM"/>
-        <segue reference="qiY-kL-BBW"/>
+        <segue reference="pKq-bO-5mC"/>
     </inferredMetricsTieBreakers>
 </document>

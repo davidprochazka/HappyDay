@@ -8,7 +8,8 @@
 
 import UIKit
 
-class RatingViewController: UIViewController {
+
+class RatingViewController: UIViewController, StatsViewControllerDelegate {
 
     var selectedPerson: Person? = nil
     
@@ -41,7 +42,7 @@ class RatingViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let statsController = (segue.destinationViewController as! UINavigationController).topViewController as! StatsViewController
-        statsController.rootNavigationController = self.navigationController
+        statsController.delegate = self
         statsController.selectedPerson = self.selectedPerson
 
         
@@ -64,5 +65,9 @@ class RatingViewController: UIViewController {
 
     @IBAction func closeClick(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func didCloseStats() {
+        navigationController?.popToRootViewControllerAnimated(true)
     }
 }
