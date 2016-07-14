@@ -8,12 +8,12 @@
 
 import UIKit
 
-class StatisticsTableViewCell: UITableViewCell {
+class TeamStatisticsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var teamName: UILabel!
-    @IBOutlet weak var timeStamp: UILabel!
-    @IBOutlet weak var rating: UILabel!
-
+    @IBOutlet weak var avg7: UILabel!
+    @IBOutlet weak var avg30: UILabel!
+    @IBOutlet weak var teamImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

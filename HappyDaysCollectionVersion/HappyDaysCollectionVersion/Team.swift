@@ -12,7 +12,7 @@ import UIKit
 
 
 class Team: NSManagedObject {
-
+    
     // factory method that creates a team with required information
     static func createTeamWithName(name: String, andImage image: UIImage?) -> Team {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -65,4 +65,5 @@ class Team: NSManagedObject {
             abort()
         }
     }
+    
 }
